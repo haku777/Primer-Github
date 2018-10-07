@@ -24,11 +24,11 @@ function UpHour(){
 	docYearj = document.getElementById("yearj"),
 	docHorasj = document.getElementById("horasj"),
 	docMinutosj = document.getElementById("minutosj"),
-	docSegundosj = document.getElementById("segundosj"),
-	docAmpmj = document.getElementById("ampmj");
+	docSegundosj = document.getElementById("segundosj");
+	var docAmpmj = document.getElementById("ampmj");
 
 	var Dsem = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
-	docDiaSemana.textContent = Dsem[2];
+	docDiaSemana.textContent = Dsem[Dia];
 	docDiaSemanaj.textContent = Dsem[Dia];
 
 	docDia.textContent = Dia;
@@ -46,12 +46,15 @@ function UpHour(){
 	if (Horas>=12) {
 		Horas = Horas-12;
 		docAmpm.textContent = "PM";
+		docAmpmj.textContent = "AM";
 	}else{
 		docAmpm.textContent = "AM";	
+		docAmpmj.textContent = "PM";	
 	}
 	if (Horas<10) {Horas = "0" + Horas;}
 	docHoras.textContent = Horas;
 	var hj = (parseInt (Horas)+14)-12;
+	if (hj<10) {hj = "0" + hj; }
 	docHorasj.textContent = hj;
 
 	if (Minutos<10) {Minutos = "0" + Minutos;}
@@ -60,8 +63,7 @@ function UpHour(){
 
 	if (Segundos<10) {Segundos = "0" + Segundos;}
 	docSegundos.textContent = Segundos;
-	var sj = parseInt (Segundos)-2;	
-	docSegundosj.textContent = sj;
+	docSegundosj.textContent = Segundos;
 
 }
 UpHour();

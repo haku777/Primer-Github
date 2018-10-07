@@ -64,6 +64,7 @@
 			</div>
 			<div class="reloj">
 				<div class="fecha">
+				<p>Colombia</p></br>
 					<p id="dsemana"></p>
 					<p id="dia"></p>
 					<p>de</p>
@@ -82,9 +83,9 @@
 					</div>
 				</div>
 			</div>
-			
 			<div class="reloj">
 				<div class="fecha">
+				<p>日本語</p></br>
 					<p id="dsemanaj"></p>
 					<p id="diaj"></p>
 					<p>de</p>
